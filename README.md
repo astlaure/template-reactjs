@@ -11,3 +11,4 @@
 1. Redux (store)
 2. i18next (i18n)
 3. bootstrap or tailwind (styling)
+4. Luxon (Date and Time)

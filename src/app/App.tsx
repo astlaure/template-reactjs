@@ -1,12 +1,18 @@
 import './App.scss';
 import React from 'react';
-import logo from '../assets/logo.svg';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { AuthContextProvider, Login } from './auth';
+import Home from './home/Home';
 
 const App: React.FC = () => (
-  <div className="app-component">
-    <h1>ReactJS Template</h1>
-    <img src={logo} alt="logo"/>
-  </div>
+  <AuthContextProvider>
+    <BrowserRouter>
+      <Switch>
+        <Route path="/login" component={Login} />
+        <Route path="/" component={Home} />
+      </Switch>
+    </BrowserRouter>
+  </AuthContextProvider>
 );
 
 export default App;
